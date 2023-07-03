@@ -1,0 +1,797 @@
+$inter: 'Inter', sans-serif;
+$poppins: 'Poppins', sans-serif;
+$primary_color: #18216D;
+
+@mixin flexElement($justify, $align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin imgAbsolute($left){ 
+    position: absolute;
+    left: $left;
+    top: 0;
+}
+
+.header{
+    width: 1400px;
+    height: 52px;
+    margin: 25px auto 0px auto;
+    @include flexElement(space-between, center );
+    &_logo{
+        @include flexElement(flex-start, center );
+        column-gap: 7px;
+        &_text{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 20px;
+            color: $primary_color;
+        }
+    }
+    &_nav{
+        width: 507px;
+        @include flexElement(space-between, center);
+        &_link{
+            font-family: $inter;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 18px;
+            color: $primary_color;
+        }
+    }
+    &_btns{
+        @include flexElement(flex-start, center );
+        column-gap: 45px;
+        &_item{
+            width: 136px;
+            height: 52px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-family: $inter;
+            font-weight: 500;
+            font-size: 17px;
+        }
+    }
+}
+.btn{
+    &_noBg{
+        background: none;
+        color: black;
+    }
+    &_blueBg{
+        background: $primary_color;
+        color: white;
+    }
+}
+.main{
+    @include flexElement(center, center );
+    &_info{
+        @include flexElement(space-between, center );
+        &_text{
+            width: 500px;
+            margin: 0px 0px 0px 323px;
+            &_title{
+                margin: 0px 0px 16px 0px;
+            }
+            &_title{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 60px; 
+                color: $primary_color;
+            }
+            &_subtext{
+                font-family: $inter;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 28px;  
+                color: $primary_color;
+            }
+            &_btn{
+                width: 180px;
+                height: 66px;
+                background: #00ECD0;
+                border: none;
+                border-radius: 6px;
+                margin-top: 34px;
+                font-family: $inter;
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 21px;
+                color: $primary_color;
+            }
+        }
+        &_img{
+            margin: 127px 270px 0px 0px;
+        }
+    }
+}
+.collaborate{
+    width: 1140px;
+    height: 235px;
+    margin: 100px 0px 0px 320px;
+    @include flexElement(center, flex-start );
+    flex-wrap: wrap;
+    &_main{
+        &_info{
+            width: 500px;
+            height: 150px;
+            margin: 0px 270px 0px 0px;
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 50px;
+            color: #18216D;
+
+        }
+    }
+    &_active{
+        width: 137px;
+        height: 134px;
+        margin: 0px 90px 0px 0px;
+        &_downloads{
+            font-family: $inter;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 70px;
+            letter-spacing: -1px;
+            color: #18216D;
+        }
+        &_follower{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #18216D;
+        }
+    }
+    &_rating{
+        width: 137px;
+        height: 134px;
+        margin: 0px 0px 0px 0px;
+        &_downloads{
+            font-family: $inter;
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 70px;
+            letter-spacing: -1px;
+            color: #18216D;
+        }
+        &_follower{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+            color: #18216D;
+        }
+    }
+    &_company{
+        width: 1110px;
+        height: 35px;
+        column-gap: 70px;
+        @include flexElement(center, center );
+    }
+}
+.title{
+    width: 542px;
+    height: 136px;
+    margin: 131px auto;
+    &_main{
+        font-family: $inter;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        color: #18216D;
+        display: flex;
+        justify-content: center;
+    }
+    &_subtext{
+        font-family: $inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        color: #18216D;
+        display: flex;
+        justify-content: center;
+    }
+}
+.advertising{
+    display: flex;
+    margin: 48px 0px 0px 240px;
+    &_recommendations{
+        width: 320px;
+        height: 267px;
+        margin: 0 80px;
+        &_title{
+            margin: 28px 0 14px 0;
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 29px;
+            color: #18216D;
+        }
+        &_info{
+            margin: 0 0 30px 0;
+            font-weight: 400;
+            font-family: $inter;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18216D;
+            opacity: 0.6;
+        }
+        &_more{
+            font-family: $inter;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 16px;
+            color: #18216D;
+        }
+    }
+}
+.integrate{
+    width: 1600px;
+    height: 593px;
+    background: #005eec2c;
+    margin: 130px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &_info{
+        width: 487px;
+        height: 307px;
+        column-gap: 90px;
+
+        &_title{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 48px;
+            color: #18216D;
+        }
+        &_subtext{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18216D;
+        }
+        &_container{
+            display: flex;
+            justify-content: flex-start;
+            &_btn{
+                width: 160px;
+                height: 52px;
+                background: #005FEC;
+                border-radius: 6px;
+                margin: 40px 0;
+            }
+        }
+    }
+    &_img{
+        width: 690px;
+        height: 437px;
+    }
+}
+.container{
+    &_main{ 
+        position: relative;
+        width: 572px;
+        height: 508px;
+        display: flex;
+        justify-content: center;
+        &_img{ 
+            width: 400px;
+            height: 450px;
+        }
+        &_points{ 
+            position: absolute;
+            z-index: -1;
+            top: 366px;
+            left: 4px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 122px;
+            height: 118px;
+            &_item{ 
+                width: 6px;
+                height: 6px;
+                background: #005eec10;
+                border-radius: 50%;
+            }
+        }
+        &_contacts{ 
+            position: absolute;
+            left: 335px;
+            top: 351px;
+            width: 184px;
+            height: 150px;
+            padding: 0 25px;
+            border-radius: 6px;
+            background: #FFF;
+            box-shadow: -4px 8px 20px rgba(24, 33, 109, 0.05);
+            &_title{ 
+                text-align: center;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 26px;
+                color: #18216D;
+            }
+            &_profiles{ 
+                width: 132px;
+                margin: 0 auto;
+                position: relative;
+                &_item{ 
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    border: 1px solid #FFF;
+                }
+            }
+        }
+        &_comunicaiton{
+            &_from{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 48px;
+                color: #18216D;
+            }
+            &_info{
+                font-family: $inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 30px;
+                color: #18216D;
+                margin: 16px 0px 30px 0px;
+            }
+            &_list{
+                &_faster{
+                    margin: 0px 0px 25px 0px;
+                    display: flex;
+                    &_img{
+                        margin: 0px 16px 0px 0px;
+                    }
+                }
+            }
+        }
+    }
+}
+.imgAbsolute{
+    &_1{ 
+        @include imgAbsolute(25px);
+    }
+    &_2{ 
+        @include imgAbsolute(50px);
+    }
+    &_3{ 
+        @include imgAbsolute(75px);
+    }
+    &_4{ 
+        @include imgAbsolute(100px);
+    }
+}
+
+.container{ 
+    @include flexElement(center,center);
+    column-gap: 95px;
+}
+.pricing{
+    margin: 130px auto 40px auto;
+    &_title{
+        font-family: $inter;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 64px;
+        text-align: center;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        color: #18216D;
+    }
+    &_subtext{
+        margin: 20px auto 40px auto;
+        font-family: $inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        letter-spacing: -1px;
+        text-transform: capitalize;
+        color: #18216D;
+    }
+}
+.btn{
+    width: 272px;
+    height: 60px;
+    margin: 0px auto;
+    @include flexElement(center, center );
+    background: #005eec1f;
+    border-radius: 6px;
+    &_whiteBg{
+        width: 135px;
+        height: 48px;
+        background: white;
+        border-radius: 6px;
+        border: none;
+        margin: 6px 0px 6px 6px;
+        font-family: $inter;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 17px;
+        color: #005FEC;
+    }
+    &_noBg{
+        width: 135px;
+        height: 48px;
+        border: none;
+        font-family: $inter;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 17px;
+        color: #18216D;
+    }
+}
+.class{
+    @include flexElement(center, center );
+    column-gap: 45px;
+    &_basic{
+        width: 355px;
+        height: 620px;
+        border: 1px solid #0000000e;
+        border-radius: 10px;
+        margin: 80px 0 0 0;
+        &_frame{
+            width: 355px;
+            height: 160px;
+            border: 1px solid #0000000e;
+            border-radius: 10px;
+            &_title{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 48px;
+                color: #18216D;
+                margin: 22px 251px 0 41px;
+            }
+            &_price{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 48px;
+                color: #18216D;
+                margin: 0px 251px 0 41px;
+            }
+        }
+        &_list{
+            @include flexElement(none,flex-start);
+            margin:  17px 0 0 12px;
+            &_noOpacity{
+                font-family: $poppins;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 24px;
+                color: #18216D;
+            }
+            &_opacity{
+                font-family: $poppins;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 24px;
+                color: #005FEC;
+            }
+            &_btn{
+                width: 181px;
+                height: 52px;
+                font-family: $inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #18216D;
+                border-radius: 6px;
+                background: #005eec3d;
+                border: none;
+                margin: 40px 133px 60px 41px;
+            }
+        }
+    }
+    &_pro{
+        width: 355px;
+        height: 620px;
+        border: 1px solid #0000000e;
+        border-radius: 10px;
+        margin: 80px 0 0 0;
+        &_frame{
+            width: 355px;
+            height: 160px;
+            border: 1px solid #0000000e;
+            border-radius: 10px;
+            &_title{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 48px;
+                color: #18216D;
+                margin: 22px 251px 0 41px;
+            }
+            &_price{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 48px;
+                color: #18216D;
+                margin: 0px 251px 0 41px;
+            }
+        }
+        &_list{
+            &_info{
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-end;
+                margin:  17px 0 0 12px;
+                &_noOpacity{
+                    font-family: $poppins;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 24px;
+                    color: #18216D;
+                }
+                &_opacity{
+                    font-family: $poppins;
+                    font-weight: 400;
+                    font-size: 17px;
+                    line-height: 24px;
+                    color: #005FEC;
+                }
+            }
+            &_btn{
+                width: 181px;
+                height: 52px;
+                font-family: $inter;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 20px;
+                color: #FFFFFF;
+                border-radius: 6px;
+                background: #005FEC;
+                border: none;
+                margin: 40px 133px 60px 41px;
+            }
+        }
+    }
+    &_business{
+        width: 355px;
+        height: 620px;
+        border: 1px solid #0000000e;
+        border-radius: 10px;
+        margin: 80px 0 0 0;
+        &_frame{
+            width: 355px;
+            height: 160px;
+            border: 1px solid #0000000e;
+            border-radius: 10px;
+            &_title{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 24px;
+                line-height: 48px;
+                color: #18216D;
+                margin: 22px 251px 0 41px;
+            }
+            &_price{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 36px;
+                line-height: 48px;
+                color: #18216D;
+                margin: 0px 251px 0 41px;
+            }
+        }
+        &_list{
+            margin:  17px 0 0 12px;
+            display: flex;
+            justify-content: flex-start;
+            &_noOpacity{
+                font-family: $poppins;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 24px;
+                color: #18216D;
+            }
+            &_opacity{
+                font-family: $poppins;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 24px;
+                color: #005FEC;
+            }
+            &_btn{
+                width: 181px;
+                height: 52px;
+                font-family: $inter;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #18216D;
+                border-radius: 6px;
+                background: #005eec3d;
+                border: none;
+                margin: 40px 133px 60px 41px;
+            }
+        }
+    }
+}
+.testimonial{
+    width: 1600px;
+    height: 650px;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 130px auto 0;
+    &_main{
+        &_title{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 48px;
+            color: #18216D;
+            margin: 0 0 55px 0;
+        }
+        &_subtext{
+            font-family: $inter;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 44px;
+            color: #18216D;
+            margin: 0 0 33px 0;
+        }
+        &_creator{
+            font-family: $inter;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 26px;
+            color: #18216D;
+            margin: 0 0 6px 0;
+        }
+        &_role{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18216D;
+        }
+    }
+}
+.completion{
+    width: 1600px;
+    height: 548px;
+    margin: 0 auto 40px auto;
+    @include flexElement(space-around, center);
+    &_download{
+        &_metting{
+            @include flexElement(flex-start, center );
+            column-gap: 11px;
+            &_title{
+                font-family: $inter;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 20px;
+                text-align: center;
+                color: #18216D;
+            }
+            &_img{
+                width: 45px;
+                height: 45px;
+            }
+        }
+        &_subtext{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18206d;
+            margin: 19px 0 20px 0;
+        }
+        &_btns{
+            &_img{
+                &_appstore{
+                    margin: 0 0 0 12px;
+                }
+            }
+        }
+    }
+    &_resources{
+        &_title{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 26px;
+            color: #18216D;
+            margin: 0 0 31px 0;
+        }
+        &_subtext{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18206d;
+            margin: 0 0 8px 0;
+        }
+    }
+    &_product{
+        &_title{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 26px;
+            color: #18216D;
+            margin: 0 0 31px 0;
+        }
+        &_subtext{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18206d;
+            margin: 0 0 8px 0;
+        }
+    }
+    &_more{
+        &_title{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 26px;
+            color: #18216D;
+            margin: 0 0 31px 0;
+        }
+        &_subtext{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18206d;
+            margin: 0 0 8px 0;
+        }
+    }
+    &_contact{
+        &_title{
+            font-family: $inter;
+            font-weight: 600;
+            font-size: 22px;
+            line-height: 26px;
+            color: #18216D;
+            margin: 0 0 31px 0;
+        }
+        &_subtext{
+            font-family: $inter;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #18206d;
+            margin: 0 0 30px 0;
+        }
+    }
+}
+.line{
+    @include flexElement(center, center );
+    margin: 0 0 30px 0;
+}
+.copyright{
+    @include flexElement(center, center );
+    margin: 0 0 20px 0;
+    &_info{
+        font-family: $inter;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #18216D;
+    }
+}
